@@ -1,0 +1,1 @@
+<view class="content"><wd-datetime-picker wx:if="{{b}}" u-i="60622a6f-0" bind:__l="__l" bindupdateModelValue="{{a}}" u-p="{{b}}"/></view>
