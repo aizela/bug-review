@@ -246,7 +246,7 @@ const handleClickMask = () => {
 const handleReplaceSelection = () => {
   // console.log('替换选中的内容', editorCtx)
   console.log('editorContext实例:',editorCtx)
-  editorCtx?.blur()
+  // editorCtx?.blur()
   editorCtx?.getSelection({
     success: (res: any) => {
       console.log('选区位置', res)
