@@ -90,7 +90,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, reactive, onMounted, getCurrentInstance, watch } from 'vue'
+import { ref, reactive, onMounted, getCurrentInstance } from 'vue'
 const instance = getCurrentInstance().proxy
 
 interface Props {
@@ -115,7 +115,7 @@ const props = withDefaults(defineProps<Props>(), {
   backgroundColor: '',
   borderRadius: '',
   maxHeight: 0,
-  isAi: true
+  isAi: false
 })
 
 const isReadonly = ref(false)
@@ -244,12 +244,12 @@ const handleClickMask = () => {
 }
 
 const handleReplaceSelection = () => {
-  // console.log('替换选中的内容', editorCtx)
-  console.log('editorContext实例:',editorCtx)
+  console.log('替换选中的内容', editorCtx)
+  console.log(editorCtx.getSelection)
   editorCtx?.blur()
-  editorCtx?.getSelection({
+  editorCtx?.getSelectionText({
     success: (res: any) => {
-      console.log('选区位置', res)
+      console.log('选中的文字', res)
     }
   })
   // editorCtx?.format('strike')

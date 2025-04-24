@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "uni-app",
-  "usingComponents": {
-    "wd-datetime-picker": "../../uni_modules/wot-design-uni/components/wd-datetime-picker/wd-datetime-picker"
-  }
-}
